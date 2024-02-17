@@ -30,17 +30,18 @@ export const Stripe = {
     extend: 'Picture',
 
     props: ({ props, key }) => ({
-      transition: 'G default min-width, G default max-width',
+      transition: 'G default min-width, G default max-width, G default filter, G default opacity',
       transitionDelay: parseInt(key) * 35 + 'ms',
-
       height: '100%',
       widthRange: `${props.ratio / RATIO_FULL * 100}%`,
       overflow: 'hidden',
-      opacity: '.5',
-      mixBlendMode: 'luminosity',
       position: 'absolute',
       top: 0,
-      left: `${(props.offset || 0) / RATIO_FULL * 100}%`
+      left: `${(props.offset || 0) / RATIO_FULL * 100}%`,
+      ':not(:hover)': {
+        opacity: '.5',
+        mixBlendMode: 'luminosity'
+      }
     }),
 
     Img: ({ key }) => ({
