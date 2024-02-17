@@ -1,0 +1,90 @@
+import IMGS from '../assets/imgs'
+
+const RATIO_FULL = 1800
+
+export const Stripe = {
+  props: {
+    flexFlow: 'row',
+    flex: 1,
+    position: 'absolute',
+    inset: '0',
+    boxSize: '100%',
+
+    '!loaded': {
+      '& picture': {
+        widthRange: '0'
+      }
+    },
+
+    onRender: (el, s) => {
+      if (s.loaded) return
+      const t = setTimeout(() => {
+        s.loaded = true
+        el.setProps({ loaded: true })
+        clearTimeout(t)
+      }, 250)
+    }
+  },
+
+  childExtend: {
+    extend: 'Picture',
+
+    props: ({ props, key }) => ({
+      transition: 'G default min-width, G default max-width',
+      transitionDelay: parseInt(key) * 35 + 'ms',
+
+      height: '100%',
+      widthRange: `${props.ratio / RATIO_FULL * 100}%`,
+      overflow: 'hidden',
+      opacity: '.5',
+      mixBlendMode: 'luminosity',
+      position: 'absolute',
+      top: 0,
+      left: `${(props.offset || 0) / RATIO_FULL * 100}%`
+    }),
+
+    Img: ({ key }) => ({
+      transform: 'scale(1) rotateZ(0deg)',
+      transformOrigin: '50% 50%',
+      position: 'absolute',
+      height: '100%',
+      src: IMGS[key],
+      transition: 'E transform default',
+
+      '.loaded': {
+        '& img': {
+          transform: 'scale(1) rotateZ(0deg)'
+        }
+      }
+    })
+  },
+
+  $propsCollection: [{
+    ratio: 194,
+    Img: { left: '-50%' }
+  }, {
+    ratio: 357,
+    offset: 207,
+    Img: { left: '-50%' }
+  }, {
+    ratio: 194,
+    offset: 594,
+    Img: { left: '-50%' }
+  }, {
+    ratio: 233,
+    offset: 801,
+    Img: { left: '-50%' }
+  }, {
+    ratio: 135,
+    offset: 1129,
+    Img: { left: '-50%' }
+  }, {
+    ratio: 195,
+    offset: 1345,
+    Img: { left: '-50%' }
+  }, {
+    ratio: 236,
+    offset: 1562,
+    Img: { left: '-50%' }
+  }]
+}
