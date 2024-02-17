@@ -15,6 +15,7 @@ export const Hero = {
     props: {
       color: 'white',
       margin: '5% 10%',
+      pointerEvents: 'none',
       position: 'relative'
     },
 
@@ -23,8 +24,7 @@ export const Hero = {
       fontWeight: '200',
       opacity: '.65',
       fontFamily: 'Code',
-      text: 'Spring 23/',
-      pointerEvents: 'none'
+      text: 'Spring 23/'
     },
 
     H1: {
@@ -33,15 +33,15 @@ export const Hero = {
       fontSize: '16vh',
       lineHeight: '1',
       maxWidth: '50%',
-      text: 'Ninja Collection',
-      pointerEvents: 'none'
+      text: 'Ninja Collection'
     },
 
     Button: {
       margin: '10% - - A1',
       padding: 'A B2',
       round: '0',
-      text: 'Check it out'
+      text: 'Check it out',
+      pointerEvents: 'auto'
     }
   }
 }

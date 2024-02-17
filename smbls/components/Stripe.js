@@ -30,7 +30,7 @@ export const Stripe = {
     extend: 'Picture',
 
     props: ({ props, key }) => ({
-      transition: 'G default min-width, G default max-width, C default filter, C default opacity',
+      transition: 'G default min-width, G default max-width, E default filter 0s, E default opacity 0s',
       transitionDelay: parseInt(key) * 35 + 'ms',
       height: '100%',
       widthRange: `${props.ratio / RATIO_FULL * 100}%`,
