@@ -23,7 +23,8 @@ export const Hero = {
       fontWeight: '200',
       opacity: '.65',
       fontFamily: 'Code',
-      text: 'Spring 23/'
+      text: 'Spring 23/',
+      pointerEvents: 'none'
     },
 
     H1: {
@@ -32,7 +33,8 @@ export const Hero = {
       fontSize: '16vh',
       lineHeight: '1',
       maxWidth: '50%',
-      text: 'Ninja Collection'
+      text: 'Ninja Collection',
+      pointerEvents: 'none'
     },
 
     Button: {
