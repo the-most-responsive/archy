@@ -22,8 +22,7 @@ create({
       flex: 1,
       width: '100%',
       minHeight: '100%',
-      position: 'relative',
-      childProps: { height: '100%' }
+      position: 'relative'
     }
   },
 

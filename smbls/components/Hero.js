@@ -6,6 +6,7 @@ export const Hero = {
     flexAlign: 'center start',
     background: 'black',
     position: 'relative',
+    maxHeight: '100dvh',
     boxSize: '100%'
   },
 

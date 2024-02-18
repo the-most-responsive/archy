@@ -1,3 +1,7 @@
 export const studio = {
-  text: 'test'
+  props: {},
+
+  SectionHgroup: {},
+
+  ProductRow: {}
 }

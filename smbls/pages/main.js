@@ -1,6 +1,9 @@
 export const main = {
-
   Hero: {},
-  
-  text: 'test'
+
+  Spacing: { boxSize: 'D1' },
+
+  ProductRow: {},
+
+  Footer: {}
 }
