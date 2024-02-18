@@ -2324,14 +2324,13 @@
   integrity sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==
 
 "@symbo.ls/atoms@latest":
-  version "2.11.291"
-  resolved "https://registry.yarnpkg.com/@symbo.ls/atoms/-/atoms-2.11.291.tgz#63154cece646726d31e92a0adf86d5cae10447d8"
-  integrity sha512-Ieb6qIOJqlv1rr7yGpWXxo7exxRfHpgXz85oIb6CVj0KyDClrlBTpkQqgyi13hUznIEGll7OVeN/FJz5YFAPfQ==
+  version "2.11.304"
+  resolved "https://registry.yarnpkg.com/@symbo.ls/atoms/-/atoms-2.11.304.tgz#5a237fae70a14b3154adc61be0cac1ca9e87c908"
+  integrity sha512-3MRxN3UP/j5WvXRw49oiRD4mPXpuiSj20hdfaVdLkDKaDhdDwMOUSxKHhz+nCFKoFEOs7nfXERVX7dYsLnpG5Q==
   dependencies:
     "@domql/state" latest
     "@domql/utils" latest
     "@symbo.ls/emotion" latest
-    "@symbo.ls/init" latest
     "@symbo.ls/scratch" latest
 
 "@symbo.ls/avatar@latest":
@@ -2344,9 +2343,9 @@
     "@symbo.ls/indicator" latest
 
 "@symbo.ls/banner@latest":
-  version "2.11.265"
-  resolved "https://registry.yarnpkg.com/@symbo.ls/banner/-/banner-2.11.265.tgz#00a7e3d120e7bd8b9caad3ba2c289840e13b82d8"
-  integrity sha512-wYnsfZDGX//fGCXQuU3/iBo9S/KLI8xtxdl+ExxAqCAaGZUtTXoN008HFKkDqB2kgqqVk7I9p248VjbafeZ7Ow==
+  version "2.11.304"
+  resolved "https://registry.yarnpkg.com/@symbo.ls/banner/-/banner-2.11.304.tgz#aa5188cc65592d758c085d2c246fe94117cf591b"
+  integrity sha512-LvCnYGQxebiTCIiANyLppfdE3oiflkclFTwc5ggiiuaUI5gBGFJmJDhwZQUcLICWZIYFm59bXHL1B3dr6YrKVQ==
   dependencies:
     "@symbo.ls/hgroup" latest
     "@symbo.ls/list" latest
@@ -2479,9 +2478,9 @@
     "@symbo.ls/textarea" latest
 
 "@symbo.ls/hgroup@latest":
-  version "2.11.270"
-  resolved "https://registry.yarnpkg.com/@symbo.ls/hgroup/-/hgroup-2.11.270.tgz#a61c0dd94e817e59cd87fb5f173bb9ada7e92b92"
-  integrity sha512-++tOKhVV6TX15ZZ2kNSTq5Lg4d7E/8l7l25/Ak/FWysQfQXbz+DBFU7bjth1bvInTR1u9XANm2OKTCgiKcLPlw==
+  version "2.11.304"
+  resolved "https://registry.yarnpkg.com/@symbo.ls/hgroup/-/hgroup-2.11.304.tgz#db901f10df187aabc45f14b62021077da592d84d"
+  integrity sha512-P5JwJGhkREiB8wnnbpYJjmwlJTkGX7ZhuceevYXnOzTkGC9m+1LidDqBDKT98Z6OXKqD4IiAl9rlEzd4ivXZsg==
   dependencies:
     "@symbo.ls/atoms" latest
 
@@ -2702,9 +2701,9 @@
     "@symbo.ls/atoms" latest
 
 "@symbo.ls/uikit@latest":
-  version "2.11.291"
-  resolved "https://registry.yarnpkg.com/@symbo.ls/uikit/-/uikit-2.11.291.tgz#095f2a8df2905968d032a064b706afa236a4a8f1"
-  integrity sha512-prFsFWEqCtRSpTViOrCw7im6pWiHYKxyu5dNqm1kCLpw4ZJRmlt6VL0nQt0hknpFgaNN/eg95RKuRZWZ0iksTQ==
+  version "2.11.304"
+  resolved "https://registry.yarnpkg.com/@symbo.ls/uikit/-/uikit-2.11.304.tgz#8d948e4b561cc1289db6ec4994c4e80ad6599b77"
+  integrity sha512-sAjNXGk9jqxaVIKxikyqyozUHMQJ1KJV143AtBWd5CqlRJdUTAryGbx7nxh+u7cEGZR8vjR84CS83vg80ueb9A==
   dependencies:
     "@domql/utils" latest
     "@symbo.ls/atoms" latest
@@ -3012,7 +3011,7 @@ attrs-in-props@latest:
   dependencies:
     "@domql/utils" latest
 
-available-typed-arrays@^1.0.5, available-typed-arrays@^1.0.6:
+available-typed-arrays@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.6.tgz#ac812d8ce5a6b976d738e1c45f08d0b00bc7d725"
   integrity sha512-j1QzY8iPNPG4o4xmO3ptzpRxTciqD3MgEHtifP/YnJpIo58Xu+ne4BejlbkuaLfXn/nz6HFiw29bLpj2PNMdGg==
@@ -3150,9 +3149,9 @@ callsites@^3.0.0:
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
 caniuse-lite@^1.0.30001587:
-  version "1.0.30001587"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001587.tgz#a0bce920155fa56a1885a69c74e1163fc34b4881"
-  integrity sha512-HMFNotUmLXn71BQxg8cijvqxnIAofforZOwGsxyXJ0qugTdspUF4sPSJ2vhgprHCB996tIDzEq1ubumPDV8ULA==
+  version "1.0.30001588"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001588.tgz#07f16b65a7f95dba82377096923947fb25bce6e3"
+  integrity sha512-+hVY9jE44uKLkH0SrUTqxjxqNTOWHsbnQDIKjwkZ3lNTzUUVdBLBGXtj/q5Mp5u98r3droaZAewQuEDzjQdZlQ==
 
 chalk@^2.4.2:
   version "2.4.2"
@@ -6143,15 +6142,16 @@ typed-array-byte-length@^1.0.0:
     is-typed-array "^1.1.10"
 
 typed-array-byte-offset@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/typed-array-byte-offset/-/typed-array-byte-offset-1.0.0.tgz#cbbe89b51fdef9cd6aaf07ad4707340abbc4ea0b"
-  integrity sha512-RD97prjEt9EL8YgAgpOkf3O4IF9lhJFr9g0htQkm0rchFp/Vx7LW5Q8fSXXub7BXAODyUQohRMyOc3faCPd0hg==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/typed-array-byte-offset/-/typed-array-byte-offset-1.0.1.tgz#5e2bcc1d93e1a332d50e8b363a48604a134692f8"
+  integrity sha512-tcqKMrTRXjqvHN9S3553NPCaGL0VPgFI92lXszmrE8DMhiDPLBYLlvo8Uu4WZAAX/aGqp/T1sbA4ph8EWjDF9Q==
   dependencies:
-    available-typed-arrays "^1.0.5"
-    call-bind "^1.0.2"
+    available-typed-arrays "^1.0.6"
+    call-bind "^1.0.7"
     for-each "^0.3.3"
+    gopd "^1.0.1"
     has-proto "^1.0.1"
-    is-typed-array "^1.1.10"
+    is-typed-array "^1.1.13"
 
 typed-array-length@^1.0.4:
   version "1.0.4"
