@@ -71,7 +71,7 @@ export const item = {
       extend: 'Flex',
       props: {
         flow: 'y',
-        gap: 'C1',
+        gap: 'C3',
         padding: 'Z A2',
         flex: 1
       },
@@ -142,6 +142,24 @@ export const item = {
           gap: 'X',
           icon: 'plus',
           text: 'Order'
+        },
+
+        Available: {
+          extend: 'Flex',
+          props: {
+            margin: 'C1 0'
+          },
+          Icon: {
+            margin: 'W X2 - -',
+            fontSize: 'C',
+            color: 'green',
+            name: 'check'
+          },
+          Hgroup: {
+            props: { gap: 'W' },
+            H6: { margin: '0', fontWeight: '400', text: 'In Stock at Archy showroom' },
+            Span: { text: 'Pickup is available upon notice' }
+          }
         }
       }
     }
