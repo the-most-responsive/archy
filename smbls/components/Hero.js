@@ -42,7 +42,14 @@ export const Hero = {
       padding: 'A B2',
       round: '0',
       text: 'Check it out',
-      pointerEvents: 'auto'
+      pointerEvents: 'auto',
+      transition: 'C default',
+      transitionProperty: 'color, background, padding, margin, font-weight',
+
+      ':hover': {
+        fontWeight: 700,
+        theme: 'secondary'
+      }
     }
   }
 }

@@ -17,9 +17,9 @@ export const Stripe = {
     },
 
     onRender: (el, s) => {
-      if (s.loaded) return
+      // if (s.loaded) return
       const t = setTimeout(() => {
-        s.loaded = true
+        // s.loaded = true
         el.setProps({ loaded: true })
         clearTimeout(t)
       }, 250)

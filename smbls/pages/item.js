@@ -1,4 +1,6 @@
 export const item = {
+  props: {},
+
   Flex: {
     props: {
       padding: 'A2 A2 A2 -',
@@ -23,7 +25,11 @@ export const item = {
           left: '50%',
           top: '50%',
           transform: 'translate3d(-50%, -50%, 1px)',
-          src: 'https://p194.p3.n0.cdn.zight.com/items/5zuvnwmO/68cd430c-4e30-413a-b7cd-898ce85959c1.png?v=95fef7ff646f0127f509ab686acd36fe'
+          src: 'https://p194.p3.n0.cdn.zight.com/items/5zuvnwmO/68cd430c-4e30-413a-b7cd-898ce85959c1.png?v=95fef7ff646f0127f509ab686acd36fe',
+          opacity: 0,
+          transition: 'C default',
+          transitionProperty: 'opacity, transform',
+          onLoad: (ev, el, s) => { el.node.style.opacity = 1 }
         }
       },
 
@@ -43,7 +49,11 @@ export const item = {
             position: 'absolute',
             left: '50%',
             top: '50%',
-            transform: 'translate3d(-50%, -50%, 1px)'
+            transform: 'translate3d(-50%, -50%, 1px)',
+            opacity: 0,
+            transition: 'C default',
+            transitionProperty: 'opacity, transform',
+            onLoad: (ev, el, s) => { el.node.style.opacity = 1 }
           }
         },
 
@@ -76,5 +86,9 @@ export const item = {
       }
     }
 
+  },
+
+  on: {
+    init: el => console.warn(el)
   }
 }

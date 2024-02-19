@@ -16,7 +16,7 @@ export const Aside = {
   Link: {
     props: {
       top: 'A2',
-      left: '-B1',
+      left: '-A2',
       position: 'absolute',
       transform: 'rotateZ(-90deg)',
       transformOrigin: '50% 50%',
@@ -24,7 +24,7 @@ export const Aside = {
       color: 'black'
     },
 
-    Icon: { name: 'logo', fontSize: '8.5em' }
+    Icon: { name: 'logo', fontSize: '7.5em' }
   },
 
   Menu: {

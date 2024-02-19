@@ -1,12 +1,13 @@
 
 export const ProductItem = {
-  extend: ['Link', 'Flex'],
+  extend: ['Flex'],
 
   state: {},
 
   props: {
     href: '/item',
     flow: 'column',
+    position: 'relative',
     align: 'center center',
     gap: 'Y',
 
@@ -16,13 +17,24 @@ export const ProductItem = {
   },
 
   Img: {
-    transition: 'C default transform',
     aspectRatio: '3 / 5',
     width: '100%',
-    src: 'https://p194.p3.n0.cdn.zight.com/items/E0uJon0N/11d817f1-ed88-411b-a5e7-5da4da83160f.png?v=66acc890569c52def3b99c5bc7b8d310'
+    src: 'https://p194.p3.n0.cdn.zight.com/items/E0uJon0N/11d817f1-ed88-411b-a5e7-5da4da83160f.png?v=66acc890569c52def3b99c5bc7b8d310',
+    opacity: 0,
+    transition: 'C default',
+    transitionProperty: 'opacity, transform',
+    onLoad: (ev, el, s) => { el.node.style.opacity = 1 }
   },
 
-  TakeIt: {}
+  Link: {
+    position: 'absolute',
+    inset: '0',
+    href: '/item'
+  },
+
+  TakeIt: {
+    zIndex: 2
+  }
 }
 
 export const ProductItemLarge = {
@@ -34,6 +46,8 @@ export const ProductItemLarge = {
   Img: {
     aspectRatio: '5 / 3'
   },
+
+  Link: {},
 
   Flex: {
     props: {
@@ -57,6 +71,7 @@ export const ProductItemLarge = {
     },
 
     TakeIt: {
+      zIndex: 2,
       margin: '-Z -A - -'
     }
   },

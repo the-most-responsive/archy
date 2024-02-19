@@ -58,23 +58,23 @@ export default {
       }
     },
     primary: {
-      '@dark': {
-        color: 'white',
-        background: 'black'
-      },
       '@light': {
         color: 'black',
         background: 'white'
+      },
+      '@dark': {
+        color: 'white',
+        background: 'black'
       }
     },
     secondary: {
       '@light': {
-        color: 'black',
-        background: 'white'
-      },
-      '@dark': {
         color: 'white',
         background: 'black'
+      },
+      '@dark': {
+        color: 'black',
+        background: 'white'
       }
     },
     alert: {
