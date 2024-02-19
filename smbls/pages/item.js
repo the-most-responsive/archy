@@ -68,7 +68,10 @@ export const item = {
     },
 
     Info: {
+      extend: 'Flex',
       props: {
+        flow: 'y',
+        gap: 'C1',
         padding: 'Z A2',
         flex: 1
       },
@@ -82,6 +85,63 @@ export const item = {
           margin: '0',
           fontWeight: '400',
           text: 'price: 420,35 GEL'
+        }
+      },
+      Hgroup_color: {
+        props: {},
+        P: {
+          textTransform: 'uppercase',
+          opacity: '.5',
+          margin: '0',
+          fontWeight: '400',
+          text: 'COLOR'
+        },
+        H6: {
+          fontWeight: '400',
+          margin: '0',
+          text: 'pendant Lights simple'
+        }
+      },
+      Hgroup_material: {
+        props: {},
+        P: {
+          textTransform: 'uppercase',
+          opacity: '.5',
+          margin: '0',
+          fontWeight: '400',
+          text: 'MATERIAL'
+        },
+        H6: {
+          fontWeight: '400',
+          margin: '0',
+          text: 'venge, wood'
+        }
+      },
+      Hgroup_size: {
+        props: {},
+        P: {
+          textTransform: 'uppercase',
+          opacity: '.5',
+          margin: '0',
+          fontWeight: '400',
+          text: 'SIZE'
+        },
+        H6: {
+          fontWeight: '400',
+          margin: '0',
+          text: '10cm x 30cm'
+        }
+      },
+
+      Clicks: {
+        props: {},
+        Button: {
+          theme: 'secondary',
+          padding: 'Z2 B2',
+          fontWeight: '300',
+          gap: 'X',
+          icon: 'plus',
+          text: 'Order'
         }
       }
     }
