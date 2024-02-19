@@ -1,6 +1,14 @@
 import IMGS from '../assets/imgs'
+import imagesLoaded from 'imagesloaded'
 
 const RATIO_FULL = 1800
+
+const preloadImages = (selector = 'img') => {
+  return new Promise((resolve) => {
+    // The imagesLoaded library is used to ensure all images (including backgrounds) are fully loaded.
+    imagesLoaded(document.querySelectorAll(selector), { background: true }, resolve)
+  })
+}
 
 export const Stripe = {
   props: {
@@ -17,12 +25,9 @@ export const Stripe = {
     },
 
     onRender: (el, s) => {
-      // if (s.loaded) return
-      const t = setTimeout(() => {
-        // s.loaded = true
+      preloadImages('.sprite-img').then(() => {
         el.setProps({ loaded: true })
-        clearTimeout(t)
-      }, 250)
+      })
     }
   },
 
@@ -45,6 +50,7 @@ export const Stripe = {
     }),
 
     Img: ({ key }) => ({
+      class: 'sprite-img',
       transform: 'scale(1) rotateZ(0deg)',
       transformOrigin: '50% 50%',
       position: 'absolute',
