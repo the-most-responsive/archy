@@ -20,8 +20,8 @@ create({
 
     content: {
       flex: 1,
-      width: '100%',
-      minHeight: '100%',
+      boxSize: '100vh 100vw',
+      overflow: 'hidden auto',
       position: 'relative'
     }
   },

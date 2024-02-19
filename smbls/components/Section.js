@@ -28,6 +28,7 @@ export const SectionHgroup = {
   },
   Span: {
     fontFamily: 'Code',
+    opacity: '0.5',
     text: 'Sprint 23/'
   }
 }

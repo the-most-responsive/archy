@@ -184,5 +184,10 @@ export default {
   CASES: {
   },
   SVG: {
+  },
+  RESET: {
+    'body, html': {
+      overflow: 'hidden'
+    }
   }
 }

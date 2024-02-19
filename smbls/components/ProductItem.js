@@ -2,14 +2,21 @@
 export const ProductItem = {
   extend: ['Link', 'Flex'],
 
+  state: {},
+
   props: {
     href: '/item',
     flow: 'column',
     align: 'center center',
-    gap: 'Y'
+    gap: 'Y',
+
+    ':hover img': {
+      transform: 'scale(.95)'
+    }
   },
 
   Img: {
+    transition: 'C default transform',
     aspectRatio: '3 / 5',
     width: '100%',
     src: 'https://p194.p3.n0.cdn.zight.com/items/E0uJon0N/11d817f1-ed88-411b-a5e7-5da4da83160f.png?v=66acc890569c52def3b99c5bc7b8d310'

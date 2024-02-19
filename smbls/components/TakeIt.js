@@ -8,6 +8,10 @@ export const TakeIt = {
     icon: 'plus',
     text: 'take it',
     gap: 'X',
-    padding: 'Z A'
+    padding: 'Z A',
+
+    onClick: (ev, el, s) => {
+      s.update({ active: true })
+    }
   }
 }
