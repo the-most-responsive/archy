@@ -1,4 +1,5 @@
 export * from './Section'
+export * from './Footer'
 export * from './Stripe'
 export * from './Hero'
 export * from './Aside'

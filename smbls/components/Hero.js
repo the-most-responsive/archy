@@ -32,7 +32,7 @@ export const Hero = {
       margin: 0,
       fontWeight: '700',
       fontSize: '16vh',
-      lineHeight: '1',
+      lineHeight: '1.2',
       maxWidth: '50%',
       text: 'Ninja Collection'
     },

@@ -2,8 +2,7 @@
 export const Footer = {
   props: {
     margin: 'auto - -',
-    padding: 'D1 Z Z',
-    fontSize: 'Z',
+    padding: 'D1 A A2',
     flexAlign: 'center space-between',
     textAlign: 'center'
   },
@@ -33,15 +32,16 @@ export const Footer = {
   },
 
   Text: {
-    flex: 2,
-    text: 'VDCapital © 2023'
-  },
-
-  Privacy: {
     flexAlign: 'center end',
-    flex: 3,
-    gap: 'B',
-    fontWeight: '400',
-    text: 'Since 2016'
+    flex: 2,
+    text: 'Archy © since 2016'
   }
+
+  // Privacy: {
+  //   flexAlign: 'center end',
+  //   flex: 3,
+  //   gap: 'B',
+  //   fontWeight: '400',
+  //   text: 'Since 2016'
+  // }
 }
