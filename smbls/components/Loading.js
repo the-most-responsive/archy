@@ -22,6 +22,7 @@ export const LoadingLogo = {
       },
 
       '.render': {
+        transform: 'translate3d(-5%, 0, 0)',
         opacity: '0'
       }
     },
