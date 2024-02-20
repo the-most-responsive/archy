@@ -3,9 +3,11 @@ import imagesLoaded from 'imagesloaded'
 
 const RATIO_FULL = 1800
 
-const preloadImages = (selector = 'img') => {
+const preloadImages = (selector = 'img', el) => {
   return new Promise((resolve) => {
     // The imagesLoaded library is used to ensure all images (including backgrounds) are fully loaded.
+    console.log(el)
+    console.log(selector, document.querySelectorAll(selector))
     imagesLoaded(document.querySelectorAll(selector), { background: true }, resolve)
   })
 }
@@ -18,6 +20,7 @@ export const Stripe = {
     inset: '0',
     boxSize: '100%',
     userSelect: 'none',
+    class: 'stripe',
 
     '!loaded': {
       '& picture': {
@@ -30,9 +33,8 @@ export const Stripe = {
     },
 
     onRender: (el, s) => {
-      preloadImages('.sprite-img').then(() => {
+      preloadImages('.stripe img', el).then(() => {
         el.setProps({ loaded: true })
-        // s.update({ loaded: true })
       })
     }
   },
@@ -64,6 +66,13 @@ export const Stripe = {
       src: IMGS[key],
       transition: 'G transform default',
       transform: 'translate3d(-50%, 0, 1px)'
+
+      // onRender: (el, s) => {
+      //   preloadImages('.sprite-img', el).then(() => {
+      //     console.log(2)
+      //     // s.update({ loaded: true })
+      //   })
+      // }
 
       // '.loaded': {
       //   transform: 'scale(1) rotateZ(0deg)'
