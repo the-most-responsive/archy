@@ -2,18 +2,22 @@
 export const Footer = {
   props: {
     margin: 'auto - -',
-    padding: 'D1 A A2',
-    flexAlign: 'center space-between',
+    padding: 'D1 A A2 0',
+    flexAlign: 'end space-between',
     textAlign: 'center'
+  },
+
+  Img: {
+    width: 'A',
+    src: new URL('../assets/sprite-vertical.svg', import.meta.url).pathname
   },
 
   Nav: {
     props: {
       flexFlow: 'row',
-      flex: 3,
-      gap: 'B',
+      gap: 'B2',
       childProps: {
-        fontWeight: '400'
+        fontWeight: '600'
       }
     },
 
@@ -33,8 +37,7 @@ export const Footer = {
 
   Text: {
     flexAlign: 'center end',
-    flex: 2,
-    text: 'Archy © since 2016'
+    text: 'Archy Inc, © Since 2016'
   }
 
   // Privacy: {

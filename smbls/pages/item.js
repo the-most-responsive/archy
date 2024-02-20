@@ -163,7 +163,7 @@ export const item = {
           Hgroup: {
             props: { gap: 'W' },
             H6: { margin: '0', fontWeight: '400', text: 'In Stock at Archy showroom' },
-            Span: { text: 'Pickup is available upon notice' }
+            Span: { opacity: '.5', text: 'Pickup is available upon notice' }
           }
         }
       }
