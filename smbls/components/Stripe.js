@@ -52,7 +52,7 @@ export const Stripe = {
 
     props: ({ props, key }) => ({
       transition: 'G default min-width, G default max-width, E default filter 0s, E default opacity 0s',
-      transitionDelay: parseInt(key) * 35 + 'ms',
+      transitionDelay: parseInt(key) * 35 + 100 + 'ms',
       height: '100%',
       overflow: 'hidden',
       position: 'absolute',

@@ -1,4 +1,5 @@
 
+let logoLoad
 export const LoadingLogo = {
   props: { flexAlign: 'center center' },
 
@@ -30,7 +31,12 @@ export const LoadingLogo = {
       src: new URL('../assets/imgloading.svg', import.meta.url).pathname,
 
       onLoad: (ev, el, s) => {
-        s.update({ init: true }, { preventUpdate: true })
+        el.parent.setProps({ init: true })
+        if (logoLoad) return
+        logoLoad = true
+        setTimeout(() => {
+          s.update({ init: true })
+        }, 750)
       }
     }
   }
@@ -62,9 +68,7 @@ export const Loading = {
     onUpdate: (el, s) => {
       if (!s.init || !s.stripeLoaded || loaded) return
       loaded = true
-      setTimeout(() => {
-        s.update({ render: true })
-      }, 500)
+      s.update({ render: true })
     }
   },
 
