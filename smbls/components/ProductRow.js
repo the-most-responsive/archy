@@ -1,4 +1,42 @@
 
+export const ProductRowLarge = {
+  extend: 'Grid',
+
+  props: {
+    columns: 'repeat(2, 1fr)',
+    padding: 'B1 B1 B1 -',
+    gap: 'A'
+  },
+
+  childExtend: 'ProductItemLarge',
+
+  $propsCollection: [{
+    // Img: { src: 'https://share.zight.com/E0uJon0N' }
+  }, {
+    Img: { src: 'https://p194.p3.n0.cdn.zight.com/items/9Zu4DBeX/5bf7e9dd-f978-412a-bb8d-79eac379d167.png?v=39749525be280da55259d24a856f0e99' }
+  }]
+}
+
+export const ProductRowMid = {
+  props: {
+    padding: 'B1 B1 B1 -'
+  },
+
+  SectionTitle: {
+    text: 'NEW ARRIVALS',
+    fontWeight: '300'
+  },
+
+  Grid: {
+    props: {
+      gap: 'A',
+      columns: 'repeat(6, 1fr)'
+    },
+
+    childExtend: 'ProductItem'
+  }
+}
+
 export const ProductRow = {
   extend: 'Flex',
 
@@ -7,41 +45,12 @@ export const ProductRow = {
     gap: 'B1'
   },
 
-  Large: {
-    extend: 'Grid',
-    props: {
-      columns: 'repeat(2, 1fr)',
-      padding: 'B1 B1 B1 -',
-      gap: 'A'
-    },
+  ProductRowLarge: {},
 
-    childExtend: 'ProductItemLarge',
-
-    $propsCollection: [{
-      // Img: { src: 'https://share.zight.com/E0uJon0N' }
-    }, {
-      Img: { src: 'https://p194.p3.n0.cdn.zight.com/items/9Zu4DBeX/5bf7e9dd-f978-412a-bb8d-79eac379d167.png?v=39749525be280da55259d24a856f0e99' }
-    }]
-  },
-
-  Mid: {
-    props: {
-      padding: 'B1 B1 B1 -'
-    },
-
-    SectionTitle: {
-      text: 'NEW ARRIVALS',
-      fontWeight: '300'
-    },
-
+  ProductRowMid: {
+    props: {},
+    SectionTitle: {},
     Grid: {
-      props: {
-        gap: 'A',
-        columns: 'repeat(6, 1fr)'
-      },
-
-      childExtend: 'ProductItem',
-
       $propsCollection: [{
         Img: { src: 'https://p194.p3.n0.cdn.zight.com/items/12ub0rxv/17c3d116-caf5-49dd-a197-19da8b719711.png?v=7b927c17cd6c05a85e665b1c2ef1f96b' }
       }, {

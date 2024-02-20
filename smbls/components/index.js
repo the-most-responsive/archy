@@ -1,5 +1,6 @@
 export * from './Loading'
 export * from './Section'
+export * from './Polycam'
 export * from './Footer'
 export * from './Stripe'
 export * from './Hero'

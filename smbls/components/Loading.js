@@ -67,7 +67,7 @@ export const Loading = {
     },
 
     onUpdate: (el, s) => {
-      if (!s.init || !s.stripeLoaded || loaded) return
+      if (!s.init || (window.location.pathname === '/' && !s.stripeLoaded) || loaded) return
       loaded = true
       s.update({ render: true })
     }

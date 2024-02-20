@@ -6,8 +6,10 @@ export const SectionTitle = {
   tag: 'h6',
   props: {
     margin: 'Z2 0',
+    textTransform: 'uppercase',
     text: 'NEW ARRIVALS',
     fontWeight: '300',
+    fontSize: 'Z1',
     opacity: '.5'
   }
 }

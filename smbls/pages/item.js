@@ -1,9 +1,13 @@
 export const item = {
-  props: {},
+  extend: 'Flex',
+  props: {
+    flow: 'y',
+    gap: 'C1',
+    padding: 'A2 A2 - -'
+  },
 
   Flex: {
     props: {
-      padding: 'A2 A2 A2 -',
       gap: 'C1'
     },
 
@@ -164,5 +168,29 @@ export const item = {
         }
       }
     }
-  }
+  },
+
+  Polycam: {},
+
+  ProductRowMid: {
+    props: { margin: 'C1 - -' },
+
+    SectionTitle: {
+      text: 'Related'
+    },
+    Grid: {
+      props: {
+        columns: 'repeat(9, 1fr)'
+      },
+      $propsCollection: [{
+        Img: { src: 'https://p194.p3.n0.cdn.zight.com/items/12ub0rxv/17c3d116-caf5-49dd-a197-19da8b719711.png?v=7b927c17cd6c05a85e665b1c2ef1f96b' }
+      }, {
+        Img: { src: 'https://p194.p3.n0.cdn.zight.com/items/Bluqd1jR/c996b919-3ee7-4382-b48e-0d1538818c9f.png?v=dbf6588e14144623488cafc49708bedf' }
+      }, {
+        Img: { src: 'https://p194.p3.n0.cdn.zight.com/items/7Kunq8Br/73ecee1a-1433-4892-9d29-811a6e215f5e.png?v=e79203942e6fec2fa6d07de18a48727a' }
+      }]
+    }
+  },
+
+  Footer: {}
 }
