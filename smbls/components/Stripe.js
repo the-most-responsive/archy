@@ -30,14 +30,15 @@ export const Stripe = {
     onRender: (el, s) => {
       setTimeout(() => {
         preloadImages('.sprite-img', el).then(() => {
-          s.update({ loaded: true })
+          s.update({ stripeLoaded: true })
         })
       }, 150)
     },
 
     onUpdate: (el, s) => {
-      if (!s.render || !s.loaded || loaded) return
+      if (!s.render || !s.stripeLoaded || loaded) return
       loaded = true
+      console.log('update')
       el.setProps({ imgsLoaded: true })
     }
   },
@@ -57,9 +58,7 @@ export const Stripe = {
       position: 'absolute',
       top: 0,
       left: `${(props.offset || 0) / RATIO_FULL * 100}%`,
-      '.loaded': {
-        widthRange: `${props.ratio / RATIO_FULL * 100}%`
-      },
+      widthRange: `${props.ratio / RATIO_FULL * 100}%`,
       ':not(:hover)': {
         opacity: '.5',
         mixBlendMode: 'luminosity'

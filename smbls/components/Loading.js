@@ -9,16 +9,18 @@ export const LoadingLogo = {
       width: '100%',
       maxWidth: 'G',
       height: 'C1',
-      transition: 'G default',
+      transition: 'G default, G default, E default',
       transitionProperty: 'max-width, transform, opacity',
       overflow: 'hidden',
       transform: 'scale(1)',
-      '!render': {
+
+      '!init': {
+        opacity: '0',
         transform: 'scale(.9)',
         maxWidth: '0'
       },
 
-      '.loaded': {
+      '.render': {
         opacity: '0'
       }
     },
@@ -28,12 +30,13 @@ export const LoadingLogo = {
       src: new URL('../assets/imgloading.svg', import.meta.url).pathname,
 
       onLoad: (ev, el, s) => {
-        s.update({ render: true })
+        s.update({ init: true }, { preventUpdate: true })
       }
     }
   }
 }
 
+let loaded
 export const Loading = {
   extend: 'Flex',
 
@@ -50,10 +53,18 @@ export const Loading = {
     opacity: 1,
     visibility: 'visible',
 
-    '.loaded': {
+    '.render': {
       pointerEvents: 'none',
       opacity: 0,
       visibility: 'hidden'
+    },
+
+    onUpdate: (el, s) => {
+      if (!s.init || !s.stripeLoaded || loaded) return
+      loaded = true
+      setTimeout(() => {
+        s.update({ render: true })
+      }, 500)
     }
   },
 
