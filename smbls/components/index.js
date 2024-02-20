@@ -1,3 +1,4 @@
+export * from './Loading'
 export * from './Section'
 export * from './Footer'
 export * from './Stripe'

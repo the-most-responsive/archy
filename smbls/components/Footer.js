@@ -45,3 +45,11 @@ export const Footer = {
   //   text: 'Since 2016'
   // }
 }
+
+export const LightFooter = {
+  props: {
+    padding: 'A',
+    flexAlign: 'center center',
+    text: 'Since 2016'
+  }
+}

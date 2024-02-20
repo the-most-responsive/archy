@@ -3,6 +3,8 @@ import imagesLoaded from 'imagesloaded'
 
 const RATIO_FULL = 1800
 
+let loaded
+
 const preloadImages = (selector = 'img', el) => {
   return new Promise((resolve) => {
     // The imagesLoaded library is used to ensure all images (including backgrounds) are fully loaded.
@@ -19,23 +21,29 @@ export const Stripe = {
     boxSize: '100%',
     userSelect: 'none',
 
-    '!loaded': {
+    '!imgsLoaded': {
       '& picture': {
         widthRange: '0'
       }
     },
 
-    onInit: (el, s) => {
-      s.loaded = false
-    },
-
     onRender: (el, s) => {
       setTimeout(() => {
         preloadImages('.sprite-img', el).then(() => {
-          el.setProps({ loaded: true })
+          s.update({ loaded: true })
         })
-      }, 0)
+      }, 150)
+    },
+
+    onUpdate: (el, s) => {
+      if (!s.render || !s.loaded || loaded) return
+      loaded = true
+      el.setProps({ imgsLoaded: true })
     }
+  },
+
+  on: {
+    init: () => { loaded = false }
   },
 
   childExtend: {
@@ -45,11 +53,13 @@ export const Stripe = {
       transition: 'G default min-width, G default max-width, E default filter 0s, E default opacity 0s',
       transitionDelay: parseInt(key) * 35 + 'ms',
       height: '100%',
-      widthRange: `${props.ratio / RATIO_FULL * 100}%`,
       overflow: 'hidden',
       position: 'absolute',
       top: 0,
       left: `${(props.offset || 0) / RATIO_FULL * 100}%`,
+      '.loaded': {
+        widthRange: `${props.ratio / RATIO_FULL * 100}%`
+      },
       ':not(:hover)': {
         opacity: '.5',
         mixBlendMode: 'luminosity'
@@ -66,10 +76,10 @@ export const Stripe = {
       transition: 'G transform default',
       transform: 'translate3d(-50%, 0, 1px)'
 
-      // '.loaded': {
+      // '.imgsLoaded': {
       //   transform: 'scale(1) rotateZ(0deg)'
       // }
-      // '!loaded': {
+      // '!imgsLoaded': {
       // transform: 'scale(1.3) rotateZ(35deg)'
       // }
     })

@@ -26,6 +26,8 @@ create({
     }
   },
 
+  Loading: {},
+
   Aside: {},
   content: {}
 }, {}, data)
