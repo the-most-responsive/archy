@@ -25,7 +25,11 @@ export const LoadingLogo = {
 
     Img: {
       height: '100%',
-      src: new URL('../assets/imgloading.svg', import.meta.url).pathname
+      src: new URL('../assets/imgloading.svg', import.meta.url).pathname,
+
+      onLoad: (ev, el, s) => {
+        s.update({ render: true })
+      }
     }
   }
 }
@@ -50,12 +54,6 @@ export const Loading = {
       pointerEvents: 'none',
       opacity: 0,
       visibility: 'hidden'
-    },
-
-    onRender: (el, s) => {
-      setTimeout(() => {
-        s.update({ render: true })
-      }, 100)
     }
   },
 
