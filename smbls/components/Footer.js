@@ -8,6 +8,7 @@ export const Footer = {
   },
 
   Img: {
+    height: 'D',
     width: 'A',
     src: new URL('../assets/sprite-vertical.svg', import.meta.url).pathname
   },
