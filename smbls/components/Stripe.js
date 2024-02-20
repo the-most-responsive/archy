@@ -47,7 +47,6 @@ export const Stripe = {
       widthRange: `${props.ratio / RATIO_FULL * 100}%`,
       overflow: 'hidden',
       position: 'absolute',
-      pointerEvents: 'none',
       top: 0,
       left: `${(props.offset || 0) / RATIO_FULL * 100}%`,
       ':not(:hover)': {
@@ -61,6 +60,7 @@ export const Stripe = {
       transformOrigin: '50% 50%',
       position: 'absolute',
       height: '100%',
+      pointerEvents: 'none',
       src: IMGS[key],
       transition: 'G transform default',
       transform: 'translate3d(-50%, 0, 1px)'

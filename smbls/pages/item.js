@@ -75,6 +75,7 @@ export const item = {
         padding: 'Z A2',
         flex: 1
       },
+
       Hgroup: {
         props: {},
         H1: {
@@ -163,10 +164,5 @@ export const item = {
         }
       }
     }
-
-  },
-
-  on: {
-    init: el => console.warn(el)
   }
 }

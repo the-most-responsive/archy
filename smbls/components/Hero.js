@@ -47,7 +47,7 @@ export const Hero = {
       transitionProperty: 'color, background, padding, margin, font-weight',
 
       ':hover': {
-        fontWeight: 700,
+        // fontWeight: 700,
         theme: 'secondary'
       }
     }
