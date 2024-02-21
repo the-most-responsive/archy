@@ -11,7 +11,6 @@ export const Polycam = {
       src: state.view === '360' ? 'https://poly.cam/capture/0AF39C3B-E953-426F-8AF5-82284C113346' : state.view === 'room' ? 'https://poly.cam/capture/9E19E3FA-DB29-4F79-BE22-EC8CAA4FFA09' : 'https://poly.cam/capture/1FAA00D4-032D-4030-AA17-28B87C27A8BC',
       allowfullscreen: '',
       loading: 'lazy',
-      title: 'polycam capture viewer',
       referrerpolicy: 'no-referrer-when-downgrade',
       flex: '1',
       minWidth: '0',

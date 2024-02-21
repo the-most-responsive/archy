@@ -14,7 +14,7 @@ create({
     width: '100%',
     minHeight: '100%',
 
-    Aside: {
+    Sidebar: {
       minHeight: '100vh'
     },
 
@@ -28,8 +28,14 @@ create({
 
   Loading: {},
 
-  Aside: {},
-  content: {}
+  Sidebar: {},
+  content: {},
+
+  on: {
+    initStateUpdate: (_, el, s) => {
+      if (s.openCart) s.openCart = false
+    }
+  }
 }, {}, data)
 
 FastClick.attach(document.body)

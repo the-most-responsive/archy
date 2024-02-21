@@ -11,8 +11,6 @@ export const TakeIt = {
     gap: 'X',
     padding: 'Z2 A',
 
-    onClick: (ev, el, s) => {
-      s.update({ active: true })
-    }
+    onClick: (ev, el, s) => s.__root.toggle('openCart')
   }
 }

@@ -146,7 +146,9 @@ export const item = {
           fontWeight: '300',
           gap: 'X',
           icon: 'plus',
-          text: 'Order'
+          text: 'Take',
+
+          onClick: (ev, el, s) => s.toggle('openCart')
         },
 
         Available: {

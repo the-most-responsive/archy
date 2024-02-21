@@ -37,6 +37,31 @@ export const ProductItem = {
   }
 }
 
+export const ProductItemSmall = {
+  extend: ['ProductItem'],
+
+  state: {},
+
+  props: {
+  },
+
+  Img: {
+    maxWidth: 'E1'
+  },
+
+  Link: {
+    position: 'absolute',
+    inset: '0',
+    href: '/item'
+  },
+
+  IncDecButton: {
+    minWidth: 'D3',
+    zIndex: 2
+  },
+  TakeIt: null
+}
+
 export const ProductItemLarge = {
   extend: 'ProductItem',
 
