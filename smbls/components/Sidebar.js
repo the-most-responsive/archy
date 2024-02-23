@@ -11,7 +11,15 @@ export const Sidebar = {
     padding: 'A2 B',
     height: '100%',
     align: 'start space-between',
-    zIndex: 10
+    zIndex: 10,
+
+    '@tabletS': {
+      align: 'center space-between',
+      widthRange: '100%',
+      boxShadow: '0, 0, C3, black .35',
+      height: 'D',
+      flow: 'row'
+    }
   },
 
   Link: {
@@ -22,7 +30,13 @@ export const Sidebar = {
       transform: 'rotateZ(-90deg)',
       transformOrigin: '50% 50%',
       href: '/',
-      color: 'black'
+      color: 'black',
+
+      '@tabletS': {
+        top: '-A2+X',
+        left: 'A2',
+        transform: 'rotateZ(0)'
+      }
     },
 
     Icon: { name: 'logo', fontSize: '7.5em' }
@@ -37,13 +51,33 @@ export const Sidebar = {
       fontFamily: 'Code',
       textTransform: 'uppercase',
       transform: 'scale(-1, -1)',
-      writingMode: 'tb'
+      writingMode: 'tb',
+
+      '@tabletS': {
+        margin: '0 0 0 F_default',
+        writingMode: 'lr',
+        transform: 'scale(1)'
+      },
+
+      '@mobileM': {
+        margin: '0 0 0 E3_default'
+      }
     },
 
     childExtend: {
       extend: 'Link',
       props: ({ props }) => ({
-        fontWeight: props.href === window.location.pathname ? 700 : 400
+        active: props.href === window.location.pathname,
+        '.active': {
+          fontWeight: 700,
+
+          '@mobileM': {
+            display: 'none'
+          }
+        },
+        '!active': {
+          fontWeight: 400
+        }
       })
     },
 
@@ -66,6 +100,9 @@ export const Sidebar = {
       flexFlow: 'column',
       gap: 'X',
       cursor: 'pointer',
+      '@tabletS': {
+        margin: '0'
+      },
       onClick: (ev, el, s) => s.toggle('openCart')
     },
 
@@ -79,6 +116,11 @@ export const Sidebar = {
       margin: 'B 0 0',
       text: state.lang === 'ge' ? 'Eng' : 'Geo',
       fontFamily: 'Code',
+
+      '@tabletS': {
+        margin: '0 0 0'
+      },
+
       onClick: (ev, el, s) => {
         s.update({ lang: state.lang === 'ge' ? 'en' : 'ge' })
       }

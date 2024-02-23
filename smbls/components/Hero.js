@@ -17,7 +17,10 @@ export const Hero = {
       color: 'white',
       margin: '5% 10%',
       pointerEvents: 'none',
-      position: 'relative'
+      position: 'relative',
+      '@tabletS': {
+        margin: 'C1 B'
+      }
     },
 
     H6: {
@@ -42,6 +45,9 @@ export const Hero = {
           fontWeight: '400',
           letterSpacing: '.15ch',
           fontFamily: 'GE'
+        },
+        '@tabletS': {
+          fontSize: '16vmin'
         }
       })
     },

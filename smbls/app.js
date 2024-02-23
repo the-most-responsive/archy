@@ -14,15 +14,29 @@ create({
     width: '100%',
     minHeight: '100%',
 
+    '@tabletS': {
+      flexFlow: 'column'
+    },
+
     Sidebar: {
-      minHeight: '100vh'
+      minHeight: '100vh',
+      '@tabletS': {
+        position: 'sticky',
+        bottom: '0',
+        minHeight: 'auto',
+        order: 2
+      }
     },
 
     content: {
       flex: 1,
-      boxSize: '100vh 100vw',
+      boxSize: '100vh auto',
+      maxHeight: 'calc(100vh - var(--spacing-D))',
       overflow: 'hidden auto',
-      position: 'relative'
+      position: 'relative',
+      '@tabletS': {
+        minHeight: 'auto'
+      }
     }
   },
 

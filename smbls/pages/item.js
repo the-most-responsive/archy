@@ -8,7 +8,10 @@ export const item = {
 
   Flex: {
     props: {
-      gap: 'C1'
+      gap: 'C1',
+      '@tabletS': {
+        flow: 'y'
+      }
     },
 
     Pics: {

@@ -101,6 +101,7 @@ export default {
   TYPOGRAPHY: {
     base: 16,
     ratio: 1.125,
+    subSequence: true,
     templates: {
       h1: {
         fontSize: 'var(--font-size-G)'
@@ -123,12 +124,19 @@ export default {
       body: {
       }
     },
-    subSequence: true
+    '@tabletS': {
+      base: 16,
+      ratio: 1.1
+    }
   },
   SPACING: {
     base: 16,
     ratio: 1.618,
-    subSequence: true
+    subSequence: true,
+    '@tabletS': {
+      base: 16,
+      ratio: 1.2
+    }
   },
   FONT: {
   },

@@ -4,7 +4,10 @@ export const Footer = {
     margin: 'auto - -',
     padding: 'D1 A A2 0',
     flexAlign: 'end space-between',
-    textAlign: 'center'
+    textAlign: 'center',
+    '@tabletS': {
+      padding: 'D1 A A2'
+    }
   },
 
   Img: {
@@ -17,6 +20,9 @@ export const Footer = {
     props: {
       flexFlow: 'row',
       gap: 'B2',
+      '@tabletS': {
+        gap: 'A'
+      },
       childProps: {
         fontWeight: '600'
       }
@@ -38,6 +44,9 @@ export const Footer = {
 
   Text: {
     flexAlign: 'center end',
+    '@tabletS': {
+      display: 'none'
+    },
     text: ({ state }) => state.lang === 'ge' ? 'შპს არჩი © 2016 წლიდან' : 'Archy LLC © Since 2016'
   }
 

@@ -5,7 +5,11 @@ export const ProductRowLarge = {
   props: {
     columns: 'repeat(2, 1fr)',
     padding: 'B1 B1 B1 -',
-    gap: 'A'
+    gap: 'A',
+    '@tabletS': {
+      padding: 'B1 B1 B1 B1',
+      columns: 'repeat(1, 1fr)'
+    }
   },
 
   childExtend: 'ProductItemLarge',
@@ -19,7 +23,10 @@ export const ProductRowLarge = {
 
 export const ProductRowMid = {
   props: {
-    padding: 'B1 B1 B1 -'
+    padding: 'B1 B1 B1 -',
+    '@tabletS': {
+      padding: 'B1 B1 B1 B1'
+    }
   },
 
   SectionTitle: {
@@ -30,7 +37,16 @@ export const ProductRowMid = {
   Grid: {
     props: {
       gap: 'A',
-      columns: 'repeat(6, 1fr)'
+      columns: 'repeat(6, 1fr)',
+      '@tabletM': {
+        columns: 'repeat(4, 1fr)'
+      },
+      '@tabletS': {
+        columns: 'repeat(3, 1fr)'
+      },
+      '@mobileL': {
+        columns: 'repeat(2, 1fr)'
+      }
     },
 
     childExtend: 'ProductItem'
