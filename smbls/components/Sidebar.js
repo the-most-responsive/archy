@@ -67,7 +67,7 @@ export const Sidebar = {
     childExtend: {
       extend: 'Link',
       props: ({ props }) => ({
-        active: props.href === window.location.pathname,
+        active: props.href === '/' && window.location.pathname !== '/studio',
         '.active': {
           fontWeight: 700,
 
