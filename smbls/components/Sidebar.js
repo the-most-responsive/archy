@@ -67,13 +67,11 @@ export const Sidebar = {
     childExtend: {
       extend: 'Link',
       props: ({ props }) => ({
-        active: props.href === '/' && window.location.pathname !== '/studio',
+        active: props.href === window.location.pathname || (props.href === '/' && window.location.pathname !== '/studio'),
         '.active': {
           fontWeight: 700,
 
-          '@mobileM': {
-            display: 'none'
-          }
+          '@mobileM': { display: 'none' }
         },
         '!active': {
           fontWeight: 400
