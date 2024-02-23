@@ -145,6 +145,11 @@ export const Sidebar = {
       transitionProperty: 'max-width, box-shadow, padding, opacity',
       zIndex: 2,
 
+      '@tabletS': {
+        position: 'fixed',
+        left: 0
+      },
+
       '.openCart': {
         padding: 'A2 C2 A2 -',
         maxWidth: 'G',

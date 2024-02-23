@@ -21,7 +21,7 @@ export const Footer = {
       flexFlow: 'row',
       gap: 'B2',
       '@mobileS': {
-        flexAlign: 'center center',
+        flexAlign: 'end center',
         flexFlow: 'column',
         gap: 'A'
       },
