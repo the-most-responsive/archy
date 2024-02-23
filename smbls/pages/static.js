@@ -9,7 +9,10 @@ const Static = {
     content: {
       flex: 1,
       margin: 'C1 auto E',
-      maxWidth: 'J'
+      maxWidth: 'J',
+      '@tabletS': {
+        padding: 'B1'
+      }
     }
   },
   LogoHeader: {},
