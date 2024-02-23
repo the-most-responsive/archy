@@ -21,6 +21,8 @@ export const Footer = {
       flexFlow: 'row',
       gap: 'B2',
       '@mobileS': {
+        flexAlign: 'center center',
+        flexFlow: 'column',
         gap: 'A'
       },
       childProps: {

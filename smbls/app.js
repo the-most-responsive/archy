@@ -19,7 +19,7 @@ create({
     },
 
     Sidebar: {
-      minHeight: '100vh',
+      minHeight: '100dvh',
       '@tabletS': {
         position: 'sticky',
         bottom: '0',
@@ -30,12 +30,12 @@ create({
 
     content: {
       flex: 1,
-      boxSize: '100vh auto',
-      maxHeight: '100vh',
+      boxSize: '100dvh auto',
+      maxHeight: '100dvh',
       overflow: 'hidden auto',
       position: 'relative',
       '@tabletS': {
-        maxHeight: 'calc(100vh - var(--spacing-D_default))'
+        maxHeight: 'calc(100dvh - var(--spacing-D_default))'
       }
     }
   },

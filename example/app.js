@@ -8,7 +8,7 @@ export const App = {
   props: {
     theme: 'document',
     flow: 'column',
-    height: '100vh',
+    height: '100dvh',
     align: 'center space-between'
   },
 
