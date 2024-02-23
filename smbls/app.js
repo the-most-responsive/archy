@@ -31,11 +31,11 @@ create({
     content: {
       flex: 1,
       boxSize: '100vh auto',
-      maxHeight: 'calc(100vh - var(--spacing-D))',
+      maxHeight: '100vh',
       overflow: 'hidden auto',
       position: 'relative',
       '@tabletS': {
-        minHeight: 'auto'
+        maxHeight: 'calc(100vh - var(--spacing-D_default))'
       }
     }
   },

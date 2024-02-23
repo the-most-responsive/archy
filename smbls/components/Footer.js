@@ -20,7 +20,7 @@ export const Footer = {
     props: {
       flexFlow: 'row',
       gap: 'B2',
-      '@tabletS': {
+      '@mobileS': {
         gap: 'A'
       },
       childProps: {

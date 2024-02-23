@@ -19,7 +19,11 @@ export const SectionHgroup = {
 
   props: {
     padding: 'B1 -',
-    gap: 'X2'
+    gap: 'X2',
+
+    '@tabletS': {
+      padding: 'B1'
+    }
   },
 
   H4: {
