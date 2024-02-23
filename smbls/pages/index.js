@@ -1,7 +1,7 @@
 import { main } from './main'
 import { studio } from './studio'
 import { about } from './about'
-import { terms } from './static'
+import { delivery, privacy, refund, terms } from './static'
 import { item } from './item'
 
 export default {
@@ -9,5 +9,8 @@ export default {
   '/studio': studio,
   '/about': about,
   '/terms': terms,
+  '/privacy': privacy,
+  '/delivery': delivery,
+  '/return': refund,
   '/item': item
 }
