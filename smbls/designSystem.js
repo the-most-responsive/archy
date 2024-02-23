@@ -77,6 +77,12 @@ export default {
         background: 'white'
       }
     },
+    dialog: {
+      '@light': {
+        color: 'black',
+        background: '#e8e8e8'
+      }
+    },
     alert: {
       '@dark': {
         color: 'white',

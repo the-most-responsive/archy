@@ -16,7 +16,7 @@ const Static = {
     }
   },
   LogoHeader: {},
-  Footer: {}
+  Footer: { order: 3 }
 }
 
 export const terms = {
