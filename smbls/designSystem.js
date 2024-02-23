@@ -140,6 +140,12 @@ export default {
       ],
       type: 'sans-serif'
     },
+    GE: {
+      value: [
+        '"AR Archy"'
+      ],
+      type: 'sans-serif'
+    },
     Code: {
       value: [
         '"Basier Square Mono"'

@@ -91,7 +91,7 @@ export const ProductItemLarge = {
         margin: '0',
         opacity: '0.5',
         fontWeight: '400',
-        text: 'price: 420,35 GEL'
+        text: ({ state }) => (state.__root.lang === 'en' ? 'price: ' : 'ფასი: ') + '420,35' + (state.__root.lang === 'en' ? ' GEL' : ' ლარი')
       }
     },
 

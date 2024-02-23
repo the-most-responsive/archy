@@ -25,20 +25,20 @@ export const Footer = {
     childExtend: 'Link',
 
     $propsCollection: [{
-      text: 'Main',
+      text: ({ state }) => state.lang === 'ge' ? 'მთავარი' : 'Main',
       href: '/'
     }, {
-      text: 'About',
-      href: '/about'
+      text: ({ state }) => state.lang === 'ge' ? 'წესები და პირობები' : 'Terms and conditions',
+      href: '/terms'
     }, {
-      text: 'Contact',
+      text: ({ state }) => state.lang === 'ge' ? 'კონტაქტი' : 'Contact',
       href: '/contact'
     }]
   },
 
   Text: {
     flexAlign: 'center end',
-    text: 'Archy Inc, © Since 2016'
+    text: ({ state }) => state.lang === 'ge' ? 'შპს არჩი © 2016 წლიდან' : 'Archy LLC © Since 2016'
   }
 
   // Privacy: {
@@ -54,6 +54,6 @@ export const LightFooter = {
   props: {
     padding: 'A',
     flexAlign: 'center center',
-    text: 'Since 2016'
+    text: ({ state }) => state.lang === 'ge' ? '2016 წწლიდან' : 'Since 2016'
   }
 }

@@ -28,6 +28,7 @@ export const SectionHgroup = {
     fontWeight: '300',
     text: 'New arrivals'
   },
+
   Span: {
     fontFamily: 'Code',
     opacity: '0.5',

@@ -89,7 +89,7 @@ export const item = {
         P: {
           margin: '0',
           fontWeight: '400',
-          text: 'price: 420,35 GEL'
+          text: ({ state }) => (state.__root.lang === 'en' ? 'price: ' : 'ფასი: ') + '420,35' + (state.__root.lang === 'en' ? ' GEL' : ' ლარი')
         }
       },
       Hgroup_color: {
@@ -99,7 +99,7 @@ export const item = {
           opacity: '.5',
           margin: '0',
           fontWeight: '400',
-          text: 'COLOR'
+          text: ({ state }) => state.lang === 'en' ? 'COLOR' : 'ფერი'
         },
         H6: {
           fontWeight: '400',
@@ -114,7 +114,7 @@ export const item = {
           opacity: '.5',
           margin: '0',
           fontWeight: '400',
-          text: 'MATERIAL'
+          text: ({ state }) => state.lang === 'en' ? 'MATERIAL' : 'მატერია'
         },
         H6: {
           fontWeight: '400',
@@ -129,7 +129,7 @@ export const item = {
           opacity: '.5',
           margin: '0',
           fontWeight: '400',
-          text: 'SIZE'
+          text: ({ state }) => state.lang === 'en' ? 'SIZE' : 'ზომა'
         },
         H6: {
           fontWeight: '400',
@@ -146,7 +146,7 @@ export const item = {
           fontWeight: '300',
           gap: 'X',
           icon: 'plus',
-          text: 'Take',
+          text: ({ state }) => state.__root.lang === 'en' ? 'Take' : 'აიღე',
 
           onClick: (ev, el, s) => s.toggle('openCart')
         },
@@ -164,8 +164,15 @@ export const item = {
           },
           Hgroup: {
             props: { gap: 'W' },
-            H6: { margin: '0', fontWeight: '400', text: 'In Stock at Archy showroom' },
-            Span: { opacity: '.5', text: 'Pickup is available upon notice' }
+            H6: {
+              margin: '0',
+              fontWeight: '400',
+              text: ({ state }) => state.__root.lang === 'en' ? 'In Stock at Archy showroom' : 'ადგილზეა არჩის შოურუმში'
+            },
+            Span: {
+              opacity: '.5',
+              text: ({ state }) => state.__root.lang === 'en' ? 'Pickup is available upon notice' : 'აღება შესაძლებელია შეთანხმებისამებრ'
+            }
           }
         }
       }

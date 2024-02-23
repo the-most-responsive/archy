@@ -25,23 +25,32 @@ export const Hero = {
       fontWeight: '200',
       opacity: '.65',
       fontFamily: 'Code',
-      text: 'Spring 23/'
+      text: ({ state }) => state.lang === 'en' ? 'Spring 23/' : 'გაზაფხული 23/'
     },
 
     H1: {
-      margin: 0,
-      fontWeight: '700',
-      fontSize: '16vh',
-      lineHeight: '1.2',
-      maxWidth: '50%',
-      text: 'Ninja Collection'
+      props: ({ state }) => ({
+        margin: 0,
+        fontWeight: '700',
+        fontSize: '16vh',
+        lineHeight: '1.2',
+        maxWidth: '50%',
+        fontFamily: 'UI',
+        GE: state.lang === 'ge',
+        text: state.lang === 'en' ? 'Ninja Collection' : 'კოლექცია ნინძა',
+        '.GE': {
+          fontWeight: '400',
+          letterSpacing: '.15ch',
+          fontFamily: 'GE'
+        }
+      })
     },
 
     Button: {
       margin: '10% - - A1',
       padding: 'A B2',
       round: '0',
-      text: 'Check it out',
+      text: ({ state }) => state.lang === 'en' ? 'Check it out' : 'კოლექციის ნახვა',
       pointerEvents: 'auto',
       transition: 'C default',
       transitionProperty: 'color, background, padding, margin, font-weight',
@@ -49,6 +58,13 @@ export const Hero = {
       ':hover': {
         // fontWeight: 700,
         theme: 'secondary'
+      },
+
+      onClick: (ev, el) => {
+        el.__ref.__root.content.node.scrollTo({
+          top: window.innerHeight,
+          behavior: 'smooth'
+        })
       }
     }
   }

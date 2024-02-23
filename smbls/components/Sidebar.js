@@ -47,12 +47,21 @@ export const Sidebar = {
       })
     },
 
-    Store: { text: 'Store', href: '/' },
-    Studio: { text: 'Studio', href: '/studio', order: -1 }
+    Store: {
+      // text: 'Store',
+      text: ({ state }) => state.lang === 'en' ? 'Store' : 'მაღაზია',
+      href: '/'
+    },
+    Studio: {
+      text: ({ state }) => state.lang === 'en' ? 'Studio' : 'სტუდია',
+      href: '/studio',
+      order: -1
+    }
   },
 
   Box: {
     props: {
+      margin: 'auto 0 0',
       fontFamily: 'Code',
       flexFlow: 'column',
       gap: 'X',
@@ -62,9 +71,18 @@ export const Sidebar = {
 
     Icon: {
       icon: 'cart'
-    },
+    }
+  },
 
-    Text: { text: 'Cart' }
+  Lang: {
+    props: ({ state }) => ({
+      margin: 'B 0 0',
+      text: state.lang === 'ge' ? 'Eng' : 'Geo',
+      fontFamily: 'Code',
+      onClick: (ev, el, s) => {
+        s.update({ lang: state.lang === 'ge' ? 'en' : 'ge' })
+      }
+    })
   },
 
   Aside: {
@@ -116,6 +134,7 @@ export const Sidebar = {
     },
 
     'Link+Button': {
+      margin: 'auto 0 0',
       theme: 'secondary',
       padding: 'Z2 B2',
       fontWeight: '300',
@@ -123,7 +142,7 @@ export const Sidebar = {
       reverse: true,
       icon: 'arrow right',
       href: '/checkout',
-      text: 'Order'
+      text: ({ state }) => state.__root.lang === 'en' ? 'Order' : 'შეუკვეთე'
     }
   },
 

@@ -7,9 +7,9 @@ export const TakeIt = {
     position: 'relative',
     background: 'transparent',
     icon: 'plus',
-    text: 'take it',
     gap: 'X',
     padding: 'Z2 A',
+    text: ({ state }) => state.__root.lang === 'en' ? 'take it' : 'აიღე',
 
     onClick: (ev, el, s) => s.__root.toggle('openCart')
   }
