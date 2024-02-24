@@ -38,7 +38,6 @@ export const Stripe = {
     onUpdate: (el, s) => {
       if (!s.render || !s.stripeLoaded || loaded) return
       loaded = true
-      console.log('update')
       el.setProps({ imgsLoaded: true })
     }
   },
