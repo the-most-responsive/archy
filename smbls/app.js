@@ -47,6 +47,7 @@ create({
 
   on: {
     initStateUpdate: (_, el, s) => {
+      if (_.order?.quantity) return
       if (s.openCart) s.openCart = false
     }
   }

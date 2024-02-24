@@ -149,7 +149,7 @@ export const item = {
           fontWeight: '300',
           gap: 'X',
           icon: 'plus',
-          text: ({ state }) => state.__root.lang === 'en' ? 'Take' : 'აიღე',
+          text: ({ state }) => state.__root.lang === 'en' ? 'Take' : 'დაამატე',
 
           onClick: (ev, el, s) => s.toggle('openCart')
         },
