@@ -1,13 +1,13 @@
 import { main } from './main'
 import { studio } from './studio'
-import { about, contact } from './about'
+import { contact } from './contact'
 import { delivery, privacy, refund, terms } from './static'
 import { item } from './item'
 
 export default {
   '/': main,
   '/studio': studio,
-  '/about': about,
+  // '/about': about,
   '/contact': contact,
   '/terms': terms,
   '/privacy': privacy,

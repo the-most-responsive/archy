@@ -3,5 +3,7 @@ export const studio = {
 
   SectionHgroup: {},
 
-  ProductRow: {}
+  ProductRow: {},
+
+  Footer: { margin: 'auto - -' }
 }
