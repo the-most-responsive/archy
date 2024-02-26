@@ -24,7 +24,7 @@ export const contact = {
       P: {
         maxWidth: '48%',
         margin: 'X - B1',
-        text: 'We celebrate the culinary heart of Georgia and the world beyond.'
+        text: 'Welcome to Tbilisi\'s premier interior design company, where elegance meets comfort. Explore our curated collection of exquisite furniture goods, crafted to elevate any space. From sleek modern designs to timeless classics, find the perfect pieces to express your style. Welcome to a world of luxury and sophistication.'
       }
     },
 

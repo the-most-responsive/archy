@@ -58,7 +58,7 @@ export const Footer = {
     '@tabletS': {
       display: 'none'
     },
-    text: ({ state }) => state.lang === 'ge' ? 'შპს არჩი © 2016 წლიდან' : 'Archy LLC © Since 2016'
+    text: ({ state }) => state.lang === 'ge' ? 'არჩი © 2016 წლიდან' : 'Archy © Since 2016'
   }
 
   // Privacy: {
