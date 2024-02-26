@@ -4,6 +4,7 @@ import { create } from 'smbls'
 import * as data from '.'
 
 import { FastClick } from 'fastclick'
+import SYMBOLSRC from '../symbols.json'
 
 create({
   props: {
@@ -51,6 +52,8 @@ create({
       if (s.openCart) s.openCart = false
     }
   }
-}, {}, data)
+}, {
+  key: SYMBOLSRC.key
+}, data)
 
 FastClick.attach(document.body)
