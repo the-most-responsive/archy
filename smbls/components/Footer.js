@@ -39,13 +39,13 @@ export const Footer = {
       text: ({ state }) => state.lang === 'ge' ? 'წესები და პირობები' : 'Terms and conditions',
       href: '/terms'
     }, {
-      text: ({ state }) => state.lang === 'ge' ? 'კონფიდენციალურობის პირობები' : 'Privacy policy',
+      text: ({ state }) => state.lang === 'ge' ? 'კონფიდენციალურობის პირობები' : 'Privacy Policy',
       href: '/privacy'
     }, {
       text: ({ state }) => state.lang === 'ge' ? 'მიტანის პირობები' : 'Delivery',
       href: '/delivery'
     }, {
-      text: ({ state }) => state.lang === 'ge' ? 'დაბრუნების პირობები' : 'Return policy',
+      text: ({ state }) => state.lang === 'ge' ? 'დაბრუნების პირობები' : 'Return Policy',
       href: '/return'
     }, {
       text: ({ state }) => state.lang === 'ge' ? 'კონტაქტი' : 'Contact',
